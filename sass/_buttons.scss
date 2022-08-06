@@ -1,0 +1,50 @@
+.button { 
+    @extend %inline-flex;
+    font-family: 'Raleway';
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 4px;
+    margin-right: 8px;
+  }
+
+.button-filled {
+    background-color: $primary;
+    border: none;
+    padding: 8px 16px;
+
+    a {
+        color: $black;
+        text-decoration: none;
+    }
+}
+
+.button-outlined { 
+  background-color: transparent;
+  border: 2px solid $primary;
+  padding: 6px 16px;
+
+  a {
+    color: $primary;
+    text-decoration: none;
+  }
+}
+
+.button-text { 
+  background-color: transparent;
+  border: none;
+  margin-left: -16px;
+  padding: 8px 16px;
+
+  a {
+    color: $primary;
+    text-decoration: none;
+  }
+}
+
+.button-circle {
+    background-color: transparent;
+    border: none;
+    padding: 8px 0px 8px 12px;
+  }
+
+

@@ -1,0 +1,21 @@
+footer {
+    background-color: $black;
+    border-top: 1px solid $primary;
+    padding-top: 20px;
+    a {
+        color: $white;
+
+        &:hover {
+            color: $primary;
+        }
+    }
+
+    ul {
+        list-style-type: none;
+        padding-inline-start: 0px
+    }
+
+    li {
+        margin-top: 20px;
+    }
+  }

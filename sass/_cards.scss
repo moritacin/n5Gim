@@ -1,0 +1,18 @@
+.card-proyecto {
+    padding: 20px 20px 20px 0px;
+    border-radius: 8px;
+    @extend %flex;
+
+    a {
+        @extend %inline-flex;
+        position: absolute;
+        font-size: $subtitle;
+        font-weight: $semibold;
+        color: $white;
+        padding: 10px;
+        text-decoration: none;
+    } &:hover {
+      color: $primary-middle-hovered;  
+    }
+
+  }
