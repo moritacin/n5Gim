@@ -1,0 +1,32 @@
+.form-row label {
+    display: block;
+    font-family: $font-family;
+    font-weight: $semibold;
+    font-size: $body;
+    color: $white;
+}
+  
+.form-control {
+    background-color: transparent;
+    border-color: $white;
+    border-radius: 4px;
+    color: $white;
+}
+  
+input:hover {
+    background-color: $black;
+}
+  
+.form-control:focus {
+    background-color: $black;
+    border-color: $primary-middle-hovered;
+    box-shadow: none;
+    color: $white;
+}
+  
+.form-check-label {
+    color: $white;
+    font-weight: $bold;
+    font-size: $body;
+}
+  

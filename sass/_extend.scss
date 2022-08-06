@@ -1,0 +1,19 @@
+%flex {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    text-align: center;
+}
+
+%inline-flex {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+%grid {
+    display: grid; 
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-column-gap: 5px;
+}

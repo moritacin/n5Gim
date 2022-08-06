@@ -1,0 +1,31 @@
+body { 
+    font-family: $font-family;
+  }
+  
+  P { 
+      font-size: $body;
+      font-weight: $regular;
+      color: $white;
+  }
+  
+  
+  h1 { 
+      font-size: $page-title;
+      font-weight: $bold;
+      color: $white;
+      margin-bottom: 32px;
+  }
+  
+  h2 { 
+    font-size: $title;
+    font-weight: $bold;
+    color: $white;
+    margin-bottom: 50px;
+  }
+  
+  h3 {
+    font-size: $subtitle;
+    font-weight:$semibold;
+    color: $white;
+    margin-bottom: 20px;
+  }
