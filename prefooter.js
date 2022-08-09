@@ -18,12 +18,6 @@ prefooterH2.classList.add('pre-footer');
 const prefooterH3 = document.createElement("h3");
 prefooterH3.textContent = "¡Vivi tu experiencia N5!";
 
-const buttonPrefooter = document.createElement("button");
-buttonPrefooter.classList.add('button', 'button-outlined');
-
-buttonPrefooter.innerHTML=`<a href="./linksInternos/actividades.html">Elegir mi actividad</a>`;
-
 prefooter.appendChild(divPrefooter);
 divPrefooter.appendChild(prefooterH2);
 divPrefooter.appendChild(prefooterH3);
-divPrefooter.appendChild(buttonPrefooter);

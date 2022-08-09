@@ -130,6 +130,16 @@ function crearCajaNosotros(estructuraNosotrosHome) {
 
     buttonNosotros.innerHTML=`<a href="nosotros.html">${estructuraNosotrosHome.button}</a>`;
 
+    //Mouseover
+    buttonNosotros.addEventListener('mouseover', () => {
+    buttonNosotros.style.backgroundColor = " rgba(255, 173, 98, 0.08)";
+    })    
+    //Mouseout
+    buttonNosotros.addEventListener('mouseout', () => {
+    buttonNosotros.style.backgroundColor = "transparent";
+   
+        })
+
     contenedorRightNosotrosHome.appendChild(nosotrosBody);
     contenedorRightNosotrosHome.appendChild(buttonNosotros);
 
@@ -209,26 +219,6 @@ function crearCajaActividadesHome(Card) {
      
 }
 
-//Button Actividades Home
-
-const buttonActividadesHome = document.getElementById("buttonActividadesHome");
-
-const divButtonActividadesHome = document.createElement("div");
-const divVacioActividadesHome = document.createElement("div");
-
-//Le doy estilo a los contenedores
-divButtonActividadesHome.classList.add('col-sm-12', 'col-md-5');
-divVacioActividadesHome.classList.add('col-sm-12', 'col-md-7');
-
-const buttonActividades = document.createElement("button");
-
-buttonActividades.classList.add('button', 'button-outlined');
-buttonActividades.innerHTML=`<a href="actividades.html">Quiero conocer todas</a>`;
-
-divButtonActividadesHome.appendChild(buttonActividades);
-buttonActividadesHome.appendChild(divButtonActividadesHome);
-buttonActividadesHome.appendChild(divVacioActividadesHome);
-
 /**
  * Donde puedes encontrarnos
  */
@@ -298,3 +288,4 @@ function crearCajaModalidadesHome(Card) {
     cardsModalidadesHome.appendChild(contenedorModalidad );
      
 }
+

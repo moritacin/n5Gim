@@ -4,7 +4,7 @@
 /** 
  * Creo un objeto tarjetas para que se pueda hacer la compra
 */
-class tarjetas {
+class Tarjetas {
     
     constructor(numeros, nombre, mesVencimiento,codigoCCV) {
         this.numeros = numeros;
