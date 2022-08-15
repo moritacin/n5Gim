@@ -1,20 +1,19 @@
-/** 
- * Creo un objeto para guardar las diferentes actividades del Gim
-*/
-
 class Actividad {
-    
-    constructor(actividad, imagen, planes, descripcion) {
+
+
+    constructor (id,tipo,actividad,image,planes){
+
+        this.id = id;
+        this.tipo = tipo;
         this.actividad = actividad;
-        this.imagen = imagen;
+        this.enlace = enlace;
+        this.image = image;
         this.planes = planes;
-        this.descripcion = descripcion;
+        this.cantidad = 1;
+
     }
-    
-    getActividad() {
-        return (` ${this.actividad} ${this.clases} ${this.descripcion}. `);
-    }
+
+
+
 
 }
-
-

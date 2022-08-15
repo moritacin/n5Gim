@@ -25,42 +25,100 @@
 </head>
 <body>
 
-    <!-- Menu de navegación -->
+   <!-- Menu de navegación -->
 
-    <header>
-        <nav class="navbar navbar-expand-lg bg-black navbar-light justify-content-sm-start fixed-top">
-            <div class="container">
-                <a class="navbar-brand mr-auto" href="../index.html">
-                    <img src="../src/logo.svg" alt="logo" width="40px">
-                </a>
-                <button class="navbar-toggler align-self-start" type="button">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse bg-grey p-3 p-lg-0 mt-5 mt-lg-0 d-flex flex-column flex-lg-row flex-xl-row justify-content-lg-end justify-content-sm-center mobileMenu" id="navbarSupportedContent">
-                    <ul class="navbar-nav align-self-stretch nav-mb">
-                        <li class="nav-item">
-                            <a class="nav-link" href="../index.html">home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="nosotros.html">nosotros</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="actividades.html">actividades</a>
-                        </li>
-                        <li class="nav-item">
-                            <button class="button button-outlined"><a href="iniciar-sesion.html">Iniciar sesión</a></button>
-                        </li>
-                        <li class="nav-item">
-                            <button class="button button-filled"><a href="registrarse.html">Registrarse</a></button>
-                        </li>
-                        <li class="nav-item">
-                            <button class="button button-circle"><img src="../src/shopping-cart.svg" alt="Carrito de compras"></button>
-                        </li>
-                    </ul>
-                </div>
+   <header>
+    <nav class="navbar navbar-expand-lg navbar-light justify-content-sm-start fixed-top">
+        <div class="container">
+            <a class="navbar-brand mr-auto" href="../index.html">
+                <img src="../src/logo.svg" alt="logo" width="40px">
+            </a>
+            <button class="navbar-toggler align-self-start" type="button">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse bg-grey p-3 p-lg-0 mt-5 mt-lg-0 d-flex flex-column flex-lg-row flex-xl-row justify-content-lg-end justify-content-sm-center mobileMenu" id="navbarSupportedContent">
+                <ul class="navbar-nav align-self-stretch nav-mb">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="nosotros.html">nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="actividades.html">actividades</a>
+                    </li>
+                    <li class="nav-item">
+                        <button class="button button-outlined"><a href="iniciar-sesion.html">Iniciar sesión</a></button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="button button-filled"><a href="registrarse.html">Registrarse</a></button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="button button-circle"><img src="../src/shopping-cart.svg" alt="Carrito de compras">
+                            <a>
+                                <i class="fa-solid fa-cart-shopping position-relative" id="iconoCarrito">
+                                    <span class="position-absolute top-0 
+                                    start-100 
+                                    translate-middle 
+                                    badge 
+                                    rounded-pill 
+                                    carrito" id="badgeCarrito">
+                                            0
+                                 </span>
+                                </i>
+                            </a>
+                        </button>
+                    </li>
+                </ul>
             </div>
-        </nav>
-    </header> 
+        </div>
+    </nav>
+</header> 
+
+<!-- Fin menu de navegación -->
+
+    <!-- Fin de navegación -->
+
+    <main>
+
+        <!-- Comienzo seccion 1 -->
+
+        <section>
+            <div class="container">
+                    <div class="row actividad"></div>
+        </section>
+
+         <!-- Fin seccion 1 -->
+
+         <!-- Comienzo seccion 2 -->
+
+        <section id="last-element">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-md-6">
+                        <h2>
+                            Descripción
+                        </h2>
+                        <p>
+                            Trampolines es una actividad que se realiza saltando sobre un mini trampolín o cama elástica. En algunos casos este trampolín cuenta con un elemento que permite ejecutar fácilmente sentadillas, entre otros movimientos. 
+                            <br><br>
+                            Durante la actividad se ejecuta una rutina basada en una coreografía en la que se trabajan diversos músculos del cuerpo, en especial de las piernas y abdomen. Proporciona numerosos beneficios a las personas que lo realizan.
+                            <br><br>
+                            La práctica de esta modalidad cardiovascular ayuda a liberar endorfinas, responsables de aumentar los niveles de felicidad y eliminar el dolor, actuando como un analgésico natural.Además, ayuda también a mejorar el equilibrio, la coordinación, la resistencia cardiovascular, tonificar el tren inferior y mejorar nuestra capacidad aeróbica.
+                        </p>
+                    </div>
+                    <div class="col-xs-12 col-md-6">
+                         <h2>
+                            Medios de pago
+                         </h2>
+                    </div>
+                </div>
+             </div>
+        </section>
+
+         <!-- Fin seccion 2 -->
+
+    </main>
 
     <!--Comienzo de footer-->
 
@@ -127,12 +185,8 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
-    <script src="./clases/alumno.js"></script>
-    <script src="./clases/onboarding.js"></script>
-    <script src="./clases/actividades.js"></script>
-    <script src="./clases/tarjetas.js"></script>
-    <script src="ingresoAlumno.js"></script>
-    <script src="comprarPlan.js"></script>
-    <script src="js/script.js"></script>
+    <script src="../clases/buttonsEvents.js"></script>
+    <script src="../clases/main.js"></script>
+    <script src="../clases/GestionarActividad.js"></script>
 </body>
 </html>

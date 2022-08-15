@@ -307,6 +307,7 @@ section {
   border: none;
   margin-left: -16px;
   padding: 8px 16px;
+  color: #FFAD62;
 }
 .button-text a {
   color: #FFAD62;
@@ -317,6 +318,11 @@ section {
   background-color: transparent;
   border: none;
   padding: 8px 0px 8px 12px;
+}
+
+.carrito {
+  background-color: #FAFAFA;
+  color: #0F0F0F;
 }
 
 /*# sourceMappingURL=style.css.map */

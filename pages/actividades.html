@@ -39,7 +39,7 @@
                 <div class="collapse navbar-collapse bg-grey p-3 p-lg-0 mt-5 mt-lg-0 d-flex flex-column flex-lg-row flex-xl-row justify-content-lg-end justify-content-sm-center mobileMenu" id="navbarSupportedContent">
                     <ul class="navbar-nav align-self-stretch nav-mb">
                         <li class="nav-item">
-                            <a class="nav-link" href="../index.html">home</a>
+                            <a class="nav-link" href="index.html">home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="nosotros.html">nosotros</a>
@@ -54,7 +54,20 @@
                             <button class="button button-filled"><a href="registrarse.html">Registrarse</a></button>
                         </li>
                         <li class="nav-item">
-                            <button class="button button-circle"><img src="../src/shopping-cart.svg" alt="Carrito de compras"></button>
+                            <button class="button button-circle"><img src="../src/shopping-cart.svg" alt="Carrito de compras">
+                                <a>
+                                    <i class="fa-solid fa-cart-shopping position-relative" id="iconoCarrito">
+                                        <span class="position-absolute top-0 
+                                        start-100 
+                                        translate-middle 
+                                        badge 
+                                        rounded-pill 
+                                        carrito" id="badgeCarrito">
+                                                0
+                                     </span>
+                                    </i>
+                                </a>
+                            </button>
                         </li>
                     </ul>
                 </div>
@@ -84,6 +97,8 @@
 
         <!-- Comienzo seccion 2-->
 
+        
+
         <section class="minus-padding">
             <div class="container">
                 <div class="row">
@@ -94,27 +109,7 @@
                     </div>
                     <div class="col-xs-12 col-md-6"></div>
                 </div>
-                <div class="row">
-                    <div class="col-sm-12 col-lg-6 card-proyecto">
-                        <img src="../src/kangoo-jumps.png" class="img-fluid" alt="Kangoo Jumps" loading="lazy">
-                        <a href="kangoo-jumps.html">Kangoo Jumps</a>      
-                    </div>
-                    <div class="col-sm-12 col-md-6 card-proyecto">
-                        <img src="../src/trampolines.png" class="img-fluid" alt="Trampolines" loading="lazy">
-                        <a href="trampolines.html">Trampolines</a>      
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-12 col-lg-6 card-proyecto">
-                        <img src="../src/x55.png" class="img-fluid" alt="X55" loading="lazy">
-                        <a href="x55.html">X55</a>      
-                    </div>
-                    <div class="col-sm-12 col-md-6 card-proyecto">
-                        <img src="../src/funcional.png" class="img-fluid" alt="Funcional" loading="lazy">
-                        <a href="funcional.html">Funcional</a>      
-                    </div>
-                </div>
-             </div>
+                <div id="actividadesResistencia" class="row"></div>
         </section>
 
         <!-- Fin seccion 2 -->
@@ -131,16 +126,7 @@
                         </h2>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-sm-12 col-lg-6 card-proyecto">
-                        <img src="../src/cross-fit.png" class="img-fluid" alt="Cross Fit" loading="lazy">
-                        <a href="cross-fit.html">Cross Fit</a>      
-                    </div>
-                    <div class="col-sm-12 col-md-6 card-proyecto">
-                        <img src="../src/musculacion.png" class="img-fluid" alt="Musculación" loading="lazy">
-                        <a href="musculacion.html">Musculación</a>      
-                    </div>
-                </div>
+                <div id="actividadesFuerza" class="row"></div>
              </div>
         </section>
 
@@ -158,16 +144,7 @@
                     </div>
                     <div class="col-xs-12 col-md-6"></div>
                 </div>
-                <div class="row">
-                    <div class="col-sm-12 col-lg-6 card-proyecto">
-                        <img src="../src/fight-do.png" class="img-fluid" alt="Fight Do" loading="lazy">
-                        <a href="fight-do.html">Fight Do</a>      
-                    </div>
-                    <div class="col-sm-12 col-md-6 card-proyecto">
-                        <img src="../src/zumba.png" class="img-fluid" alt="Zumba" loading="lazy">
-                        <a href="zumba.html">Zumba</a>      
-                    </div>
-                </div>
+                <div id="actividadesPesoCorporal" class="row"></div>
              </div>
         </section>
 
@@ -185,16 +162,7 @@
                         </h2>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-sm-12 col-lg-6 card-proyecto">
-                        <img src="../src/yoga.png" class="img-fluid" alt="Yoga" loading="lazy">
-                        <a href="yoga.html">Yoga</a>      
-                    </div>
-                    <div class="col-sm-12 col-md-6 card-proyecto">
-                        <img src="../src/streching.png" class="img-fluid" alt="Streching" loading="lazy">
-                        <a href="streching.html">Streching</a>      
-                    </div>
-                </div>
+                <div id="actividadesCalma" class="row"></div>
              </div>
         </section>
 
@@ -267,12 +235,8 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
-    <script src="./clases/alumno.js"></script>
-    <script src="./clases/onboarding.js"></script>
-    <script src="./clases/actividades.js"></script>
-    <script src="./clases/tarjetas.js"></script>
-    <script src="ingresoAlumno.js"></script>
-    <script src="comprarPlan.js"></script>
-    <script src="js/script.js"></script>
+    <script src="../clases/buttonsEvents.js"></script>
+    <script src="../clases/main.js"></script>
+    <script src="../clases/GestionarActividad.js"></script>
 </body>
 </html>
