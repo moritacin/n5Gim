@@ -229,7 +229,6 @@ class GestionarActividad {
         this.cardActividadesCalma(actividadesCalma);
         
          */
-
         
         const kangooJumps = actividades.filter (e => e.actividad == "Kangoo Jumps");
         const trampolines = actividades.filter (e => e.actividad == "Trampolines");
@@ -241,6 +240,8 @@ class GestionarActividad {
         const zumba = actividades.filter (e => e.actividad == "Zumba");
         const yoga = actividades.filter (e => e.actividad == "Yoga");
         const streching = actividades.filter (e => e.actividad == "Streching");
+
+        
 
         this.kangooJumps(kangooJumps);
         this.trampolines(trampolines);
@@ -258,7 +259,8 @@ class GestionarActividad {
         this.actualizarContador();
     }
 
-    //Funcion encargada de cargar las Cards destacada en la home
+    //Funcion encargada de cargar las Cards destacada en actividades
+
 
 
     /**
@@ -376,6 +378,7 @@ class GestionarActividad {
    
 
     kangooJumps(kangooJumps) {
+        
         this.detalle (kangooJumps);
     }
 
