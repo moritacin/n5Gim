@@ -465,6 +465,7 @@ class GestionarActividad {
                                 ${actividades.planes.plan}
                                 </label>
                                 <p>
+                                
                                 ${actividades.planes.detalle}
                                 </p>
                             </div>
