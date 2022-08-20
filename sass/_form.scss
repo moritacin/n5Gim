@@ -6,18 +6,26 @@
     color: $white;
 }
   
-.form-control {
+.form-select {
     background-color: transparent;
     border-color: $white;
     border-radius: 4px;
     color: $white;
 }
-  
-input:hover {
+
+select { 
+    height: 36px;
+    color: $white;
+    background-color: transparent;
+    border-color: $white;
+    border-radius: 4px;
+}
+
+select:hover {
     background-color: $black;
 }
   
-.form-control:focus {
+.form-select:focus {
     background-color: $black;
     border-color: $primary-middle-hovered;
     box-shadow: none;
@@ -29,4 +37,3 @@ input:hover {
     font-weight: $bold;
     font-size: $body;
 }
-  
