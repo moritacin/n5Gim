@@ -2,7 +2,7 @@ const entrenamientos = [
 	{
 		id: 1,
 		tipo: "resistencia",
-		actividad: "Kangoo Jumps",
+		nombre: "Kangoo Jumps",
 		enlace: "kangoo-jumps.html",
 		image: "../src/kangoo-jumps.png",
 		planes: [
@@ -30,7 +30,7 @@ const entrenamientos = [
 	{
 		id: 2,
 		tipo: "resistencia",
-		actividad: "Trampolines",
+		nombre: "Trampolines",
 		enlace: "trampolines.html",
 		image: "../src/trampolines.png",
 		planes: [
@@ -55,7 +55,7 @@ const entrenamientos = [
 	{
 		id: 3,
 		tipo: "resistencia",
-		actividad: "X55",
+		nombre: "X55",
 		enlace: "x55.html",
 		image: "../src/x55.png",
 		planes: [
@@ -80,7 +80,7 @@ const entrenamientos = [
 	{
 		id: 4,
 		tipo: "resistencia",
-		actividad: "Funcional",
+		nombre: "Funcional",
 		enlace: "funcional.html",
 		image: "../src/funcional.png",
 		planes: [
@@ -105,7 +105,7 @@ const entrenamientos = [
 	{
 		id: 5,
 		tipo: "fuerza",
-		actividad: "Cross Fit",
+		nombre: "Cross Fit",
 		enlace: "cross-fit.html",
 		image: "../src/cross-fit.png",
 		planes: [
@@ -130,7 +130,7 @@ const entrenamientos = [
 	{
 		id: 6,
 		tipo: "fuerza",
-		actividad: "Musculación",
+		nombre: "Musculación",
 		enlace: "musculacion.html",
 		image: "../src/musculacion.png",
 		planes: [
@@ -155,7 +155,7 @@ const entrenamientos = [
 	{
 		id: 7,
 		tipo: "pesoCorporal",
-		actividad: "Fight Do",
+		nombre: "Fight Do",
 		enlace: "fight-do.html",
 		image: "../src/fight-do.png",
 		planes: [
@@ -180,7 +180,7 @@ const entrenamientos = [
 	{
 		id: 8,
 		tipo: "pesoCorporal",
-		actividad: "Zumba",
+		nombre: "Zumba",
 		enlace: "zumba.html",
 		image: "../src/zumba.png",
 		planes: [
@@ -205,7 +205,7 @@ const entrenamientos = [
 	{
 		id: 9,
 		tipo: "calma",
-		actividad: "Yoga",
+		nombre: "Yoga",
 		enlace: "yoga.html",
 		image: "../src/yoga.png",
 		planes: [
@@ -230,7 +230,7 @@ const entrenamientos = [
 	{
 		id: 10,
 		tipo: "calma",
-		actividad: "Streching",
+		nombre: "Streching",
 		enlace: "streching.html",
 		image: "../src/streching.png",
 		planes: [
