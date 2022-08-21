@@ -20,7 +20,7 @@ resistencia.forEach((actividad) => {
     divCards.classList.add('col-xs-12', 'col-md-6', 'card-proyecto')
     divCards.innerHTML="";
 
-    divCards.innerHTML= `<img src="${image}" class="img-fluid animate__animated animate__fadeIn">
+    divCards.innerHTML= `<img src="../src/${image}" class="img-fluid animate__animated animate__fadeIn">
                           <a href="${enlace}">${nombre}</a>`
     
     contenedor.appendChild(divCards);
@@ -33,7 +33,7 @@ fuerza.forEach((actividad) => {
     divCards.classList.add('col-xs-12', 'col-md-6', 'card-proyecto')
     divCards.innerHTML="";
 
-    divCards.innerHTML= `<img src="${image}" class="img-fluid animate__animated animate__fadeIn">
+    divCards.innerHTML= `<img src="../src/${image}" class="img-fluid animate__animated animate__fadeIn">
                           <a href="${enlace}">${nombre}</a>`
     
     contenedor.appendChild(divCards);
@@ -46,7 +46,7 @@ pesoCorporal.forEach((actividad) => {
     divCards.classList.add('col-xs-12', 'col-md-6', 'card-proyecto')
     divCards.innerHTML="";
 
-    divCards.innerHTML= `<img src="${image}" class="img-fluid animate__animated animate__fadeIn">
+    divCards.innerHTML= `<img src="../src/${image}" class="img-fluid animate__animated animate__fadeIn">
                           <a href="${enlace}">${nombre}</a>`
     
     contenedor.appendChild(divCards);
@@ -59,7 +59,7 @@ calma.forEach((actividad) => {
     divCards.classList.add('col-xs-12', 'col-md-6', 'card-proyecto')
     divCards.innerHTML="";
 
-    divCards.innerHTML= `<img src="${image}" class="img-fluid animate__animated animate__fadeIn">
+    divCards.innerHTML= `<img src="../src/${image}" class="img-fluid animate__animated animate__fadeIn">
                           <a href="${enlace}">${nombre}</a>`
     
     contenedor.appendChild(divCards);

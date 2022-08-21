@@ -4,7 +4,7 @@ const entrenamientos = [
 		tipo: "resistencia",
 		nombre: "Kangoo Jumps",
 		enlace: "kangoo-jumps.html",
-		image: "../src/kangoo-jumps.png",
+		image: "kangoo-jumps.png",
 		planes: [
 			{
 				plan: "Principiante",
@@ -32,7 +32,7 @@ const entrenamientos = [
 		tipo: "resistencia",
 		nombre: "Trampolines",
 		enlace: "trampolines.html",
-		image: "../src/trampolines.png",
+		image: "trampolines.png",
 		planes: [
 			{
 				plan: "Principiante",
@@ -57,7 +57,7 @@ const entrenamientos = [
 		tipo: "resistencia",
 		nombre: "X55",
 		enlace: "x55.html",
-		image: "../src/x55.png",
+		image: "x55.png",
 		planes: [
 			{
 				plan: "Principiante",
@@ -82,7 +82,7 @@ const entrenamientos = [
 		tipo: "resistencia",
 		nombre: "Funcional",
 		enlace: "funcional.html",
-		image: "../src/funcional.png",
+		image: "funcional.png",
 		planes: [
 			{
 				plan: "Principiante",
@@ -107,7 +107,7 @@ const entrenamientos = [
 		tipo: "fuerza",
 		nombre: "Cross Fit",
 		enlace: "cross-fit.html",
-		image: "../src/cross-fit.png",
+		image: "cross-fit.png",
 		planes: [
 			{
 				plan: "Principiante",
@@ -132,7 +132,7 @@ const entrenamientos = [
 		tipo: "fuerza",
 		nombre: "Musculación",
 		enlace: "musculacion.html",
-		image: "../src/musculacion.png",
+		image: "musculacion.png",
 		planes: [
 			{
 				plan: "Principiante",
@@ -157,7 +157,7 @@ const entrenamientos = [
 		tipo: "pesoCorporal",
 		nombre: "Fight Do",
 		enlace: "fight-do.html",
-		image: "../src/fight-do.png",
+		image: "fight-do.png",
 		planes: [
 			{
 				plan: "Principiante",
@@ -182,7 +182,7 @@ const entrenamientos = [
 		tipo: "pesoCorporal",
 		nombre: "Zumba",
 		enlace: "zumba.html",
-		image: "../src/zumba.png",
+		image: "zumba.png",
 		planes: [
 			{
 				plan: "Principiante",
@@ -207,7 +207,7 @@ const entrenamientos = [
 		tipo: "calma",
 		nombre: "Yoga",
 		enlace: "yoga.html",
-		image: "../src/yoga.png",
+		image: "yoga.png",
 		planes: [
 			{
 				plan: "Principiante",
@@ -232,7 +232,7 @@ const entrenamientos = [
 		tipo: "calma",
 		nombre: "Streching",
 		enlace: "streching.html",
-		image: "../src/streching.png",
+		image: "streching.png",
 		planes: [
 			{
 				plan: "Principiante",
