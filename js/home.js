@@ -11,7 +11,7 @@ destacado.forEach((actividad) => {
     divCards.classList.add('col-xs-12', 'col-md-4', 'card-proyecto')
     divCards.innerHTML="";
 
-    divCards.innerHTML= `<img src="${actividad.image}" class="img-fluid animate__animated animate__fadeIn">
+    divCards.innerHTML= `<img src="src/${actividad.image}" class="img-fluid animate__animated animate__fadeIn">
                           <a href="pages/${actividad.enlace}">${actividad.nombre}</a>`
     
     contenedor.appendChild(divCards);
