@@ -1,14 +1,14 @@
-const fighDo = [];
+const fightDo = [];
 
 
 //el array actividades ahora tiene objetos de la clase Actividad.
 //Es de una forma fácil para no tener que estar pasando propiedades
 entrenamientos.forEach((entrenamientos) => {
-    entrenamientos.nombre == "Fight Do" && fighDo.push(new Actividad(entrenamientos)); 
+    entrenamientos.nombre == "Fight Do" && fightDo.push(new Actividad(entrenamientos)); 
 });
 
-fighDo.forEach((actividad) => {
-    const contenedorfight = document.getElementById("contenedor-fighDo");
+fightDo.forEach((actividad) => {
+    const contenedorfight = document.getElementById("contenedor-fightDo");
     const { image, nombre, planes,id} = actividad;
     contenedorfight.innerHTML = "";
 	contenedorfight.innerHTML += `
@@ -49,10 +49,25 @@ fighDo.forEach((actividad) => {
                                     </select>
                                 </div>
                         </div>
-                        <button class="button button-filled extreme"><a href="javascript:addCarrito(${id} ${planes.plan})">Agregar al carrito</a></button>
+                        <button class="button button-filled extreme btnCart"><a href="javascript:addCarrito(${id})">Agregar al carrito</a></button>
                     </div>
                   </div>
                 </div>
                 `;
 });
 
+
+
+const addCarrito = () => {
+    const btnCart = document.querySelector(".btnCart")
+    btnCart.addEventListener('click', () => {
+   
+        Toastify({
+            text: "Agregaste la actividad con éxito",
+            duration: 3000,
+        }).showToast();
+    
+    })
+    
+
+}

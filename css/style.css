@@ -1,5 +1,4 @@
 /*Nestign anidamiento*/
-
 body {
   font-family: "Raleway";
 }
@@ -159,6 +158,25 @@ ul {
   color: #FAFAFA;
 }
 
+.form-control {
+  height: 36px;
+  color: #FAFAFA;
+  background-color: transparent;
+  border-color: #FAFAFA;
+  border-radius: 4px;
+}
+
+.form-control:hover {
+  background-color: #0F0F0F;
+}
+
+.form-control:focus {
+  background-color: #0F0F0F;
+  border-color: #FF9C40;
+  box-shadow: none;
+  color: #FAFAFA;
+}
+
 select {
   height: 36px;
   color: #FAFAFA;
@@ -235,7 +253,11 @@ section {
 }
 
 #extra-padd {
-  margin: 8px 8px 8px 0px;
+  margin: 12px 40px 12px 0px;
+}
+
+.extra {
+  margin-top: 10px;
 }
 
 .extreme {
