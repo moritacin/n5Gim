@@ -13,6 +13,7 @@ entrenamientos.forEach((entrenamientos) => {
 
 });
 
+
 resistencia.forEach((actividad) => {
     const contenedor = document.querySelector("#actResistencia");
     const {image, enlace, nombre } = actividad;
@@ -64,4 +65,3 @@ calma.forEach((actividad) => {
     
     contenedor.appendChild(divCards);
 });
-

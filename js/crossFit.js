@@ -97,7 +97,11 @@ const mostrarMensaje = () => {
     Toastify({
         text: "¡Agregamos la actividad al carrito!",
         duration: 3000,
-        gravity: "top",
-        position: "left",
+        gravity: "bottom",
+        position: "right",
+        style: {
+            background: "#FFAD62",
+            color: "#262626",
+          },
     }).showToast();
 }
