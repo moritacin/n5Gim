@@ -1,113 +1,81 @@
-let carrito       = [];
+//Se llama al contenedor donde esta el carrito
+const contenedor = document.querySelector("#carrito");
 
-//Si hay algo guardado lo cargo y si no, no mostres nada
-carrito = JSON.parse( localStorage.getItem('carrito') ) || [];
-
-const addCarrito = (detalleActividad) => {
-
-    const existe = carrito.some (actividad => actividad.id === detalleActividad.id);
-
-    if (existe) {
-        const acts = carrito.map ( actividad => {
-            if (actividad.id === detalleActividad.id) {
-                actividad.cantidad++
-                return actividad;
-            }else {
-                return actividad;
-            }
-
-            carrito = acts;
-        })
-        Toastify({
-            text: "Sumamos el plan al carrito",
-            duration: 1000,
-            gravity: 'bottom'
-
-        }).showToast();
-    }else 
-    {
-        // Como no existe lo agrego
-        carrito.push(infoProducto);
-
-        Toastify({
-         text: "Se agrego la actividad",
-         duration: 1000,
-         gravity: 'bottom'
-
-     }).showToast();
-
+//Retorna el dato cuyo nombre pasamos por parámetro key, o un array vacío si no existe
+const traerDeLocalStorage = (key) => {
+    let carrito = [];
+    if (localStorage.getItem(key)) {
+        carrito = JSON.parse(localStorage.getItem(key));
     }
-
+    return carrito;
 }
- 
-     //Contabilizo las cantidad de productos
-    const contarProductos = ()=> { 
 
-        let contadorProductos = 0;
+//Guarda value en el localStorage bajo el nombre que pasemos en el key
+const guardarEnLocalStorage = (key, value) => {
+    localStorage.setItem(key, JSON.stringify(value));
+}
 
-        carrito.forEach(( producto ) => {
+//Función para mostrar el carrito
+const mostrarCarrito = () => {
+    //Traemos el carrito del localStorage
+    const carrito = traerDeLocalStorage("carrito");
+    //Si no había nada nos dice que está vacío
+    if (carrito.length == 0) {
+        contenedor.innerHTML = `
+                <div class="container">
+                    <div class="row">
+                        <h2>Tu carrito está vacío</h2>
+                    </div>
+                </div>
+        `;
+    } else {
+        //Si había productos guardados agrega al contenedor un 'ul' con el listado de todos los productos
+        const div = document.createElement('div');
+        div.classList.add('container');
+        div.setAttribute('id', 'space');
+        contenedor.innerHTML = '';
+        carrito.forEach(actividad => {
 
-            contadorProductos = contadorProductos + parseInt(producto.cantidad);
-        })
-
-        return contadorProductos;
+            div.innerHTML += `
+                            <div id="${actividad.id}" class="row carritoItem">
+                                <div class="col-xs-12 col-md-6 ">
+                                    <img src="../src/${actividad.image}" class="img-fluid animate__animated animate__fadeIn" alt="Hero home">
+                                </div>
+                                <div class="col-xs-12 col-md-6">
+                                    <h2>
+                                        ${actividad.nombre}
+                                    </h2>
+                                        <p>
+                                            Actividades online y presenciales, instalaciones modernas y el mejor acompañamiento profesional.
+                                        </p>
+                                    <button class="button button-outlined remove">Eliminar</button>
+                                </div>
+                            </div>
+            `;
+        });
+        contenedor.appendChild(div);
     }
+}
 
-    //Actualizo el carrito
-    const actualizarCarrito = () => {
+//Al hacer click llamamos a un evento que manda el id de la actividad al local storage
 
-        
-        actualizarContador();
-
-        
-        guardarCarrito();
+contenedor.addEventListener("click", e => {
+    //Si donde hacen clic es sobre el botón de eliminar
+    if (e.target.classList.contains("remove")) {
+        //Guardamos el id del producto
+        const id = e.target.parentNode.parentNode.id;
+        //Traemos el carrito de localStorage
+        let carrito = traerDeLocalStorage("carrito");
+        //Eliminamos el producto que coincida con el id
+        carrito = carrito.filter(actividad => actividad.id != id);
+        //Guardamos el carrito en localStorage
+        guardarEnLocalStorage("carrito", carrito);
+        //Actualizamos la vista del carrito
+        mostrarCarrito();
     }
+});
 
-    // Actualizar contador carrito
-    const actualizarContador = ()=> { 
+//Mostramos el carrito apenas se carga la página
+mostrarCarrito();
 
-        let totalArticulos = this.contarProductos();
 
-        let countCarrito = document.querySelector('#badgeCarrito');
-
-        // Actualizar contador del carrito
-        countCarrito.innerHTML = totalArticulos;
-
-    }
-
-   const eliminarArticulo = ( id ) => { 
-
-        Swal.fire({
-            title: '"Esta seguro de eliminar el producto ?"',
-            showCancelButton: true,
-            cancelButtonColor: '#d33',
-            confirmButtonText: 'Si, eliminarlo',
-            cancelButtonText: `Cancelar`,
-          }).then((result) => {
-            
-            if (result.isConfirmed) 
-            {
-                carrito = carrito.filter( articulo => articulo.id != id);
-                this.actualizarCarrito();
-
-                // Mostramos un msg con el resultado de la operacion
-                Toastify({
-                    text: "El articulo fue eliminado del carrito",
-                    duration: 2000,
-                    gravity: 'bottom'
-
-                }).showToast();
-            }            
-          })         
-          
-    }
-    
-    // Guardar en Storage
-    const guardarCarrito = () => { 
-       
-        localStorage.setItem(key_carrito, JSON.stringify( carrito ));
-        const dt = DateTime.now();
-       let date =  dt.toLocaleString();
-        
-        localStorage.setItem(key_actualizacion,date);
-    }

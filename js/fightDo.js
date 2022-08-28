@@ -3,15 +3,15 @@ const fightDo = [];
 
 //el array actividades ahora tiene objetos de la clase Actividad.
 //Es de una forma fácil para no tener que estar pasando propiedades
-entrenamientos.forEach((entrenamientos) => {
+entrenamientos.map((entrenamientos) => {
     entrenamientos.nombre == "Fight Do" && fightDo.push(new Actividad(entrenamientos)); 
 });
 
-fightDo.forEach((actividad) => {
-    const contenedorfight = document.getElementById("contenedor-fightDo");
-    const { image, nombre, planes,id} = actividad;
-    contenedorfight.innerHTML = "";
-	contenedorfight.innerHTML += `
+fightDo.map((actividad) => {
+    const contenedor = document.getElementById("contenedor-fightDo");
+    const { image, nombre, planes, id} = actividad;
+    contenedor.innerHTML = "";
+	contenedor.innerHTML += `
                 <div class="container">
                   <div class="row">
                     <div class="col-xs-12 col-md-6">
@@ -25,7 +25,7 @@ fightDo.forEach((actividad) => {
                           ${planes.map((plan) => {
 									return `
                                     <li>
-                                        <strong>${plan.plan}</strong> <br> ${plan.detalle}<br> Precio: $ ${plan.precio}
+                                        <strong>${plan.nombreplan}</strong> <br> ${plan.detalle}<br> Precio: $ ${plan.precio}
                                     </li>`;
 								})}
                         </ul>
@@ -43,31 +43,61 @@ fightDo.forEach((actividad) => {
                                     <select class="form-select extreme" aria-label="Default select example">
                                     ${planes.map((plan) => {
                                         return `
-                                        <option value="${plan.id}">${plan.plan}</option>`
+                                        <option value="${plan.id}">${plan.nombreplan}</option>`
                                     
                                     })}
                                     </select>
                                 </div>
                         </div>
-                        <button class="button button-filled extreme btnCart"><a href="javascript:addCarrito(${id})">Agregar al carrito</a></button>
+                        <button id="${id}" class="button button-filled extreme agregar">Agregar al carrito</a></button>
                     </div>
                   </div>
                 </div>
                 `;
 });
 
+const traerDeLocalStorage = (key) => {
+    // console.log(localStorage.getItem('veamos-que-trae-si-la-key-no-existe'));
+    let carrito = [];
+    if (localStorage.getItem(key)) {
+        carrito = JSON.parse(localStorage.getItem(key));
+    }
+    return carrito;
+}
 
+const guardarEnLocalStorage = (key, value) => {
+    localStorage.setItem(key, JSON.stringify(value));
+}
 
-const addCarrito = () => {
-    const btnCart = document.querySelector(".btnCart")
-    btnCart.addEventListener('click', () => {
-   
-        Toastify({
-            text: "Agregaste la actividad con éxito",
-            duration: 3000,
-        }).showToast();
+//Retorna el producto de data.js que coincida con el argumento
+const obtenerProducto = (id) => {
+    return fightDo.find(actividad => actividad.id == id);
+}
+
+const btnAgregar = document.querySelector(".agregar");
+btnAgregar.addEventListener("click", e => {
     
-    })
-    
 
+    //Si la etiqueta donde hicimos clic tiene la clase 'agregar'
+    if (e.target.classList.contains("agregar")) {
+        //Traemos al carrito de localStorage y al producto de data.js y lo agregamos al primero
+        const carrito = traerDeLocalStorage("carrito");
+        const act = obtenerProducto(e.target.id);
+        carrito.push(act);
+
+        //Actualizamos localStorage
+        guardarEnLocalStorage("carrito", carrito);
+        //Mostramos un modal de producto agregado
+        mostrarMensaje();
+        
+    }
+});
+
+const mostrarMensaje = () => {
+    Toastify({
+        text: "¡Agregamos la actividad al carrito!",
+        duration: 3000,
+        gravity: "top",
+        position: "left",
+    }).showToast();
 }

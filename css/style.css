@@ -335,6 +335,7 @@ section {
   background-color: transparent;
   border: 2px solid #FFAD62;
   padding: 6px 16px;
+  color: #FFAD62;
 }
 .button-outlined a {
   color: #FFAD62;
@@ -359,9 +360,26 @@ section {
   padding: 8px 0px 8px 12px;
 }
 
-.carrito {
+.badge {
   background-color: #FAFAFA;
-  color: #0F0F0F;
+  color: #FFAD62;
+}
+
+.bi-cart-fill {
+  color: #FFAD62;
+}
+.bi-cart-fill:hover {
+  color: #FF9C40;
+}
+
+.carritoItem {
+  border-radius: 4px;
+  padding: 16px;
+  border: 2px solid #FAFAFA;
+}
+
+#space {
+  padding-bottom: 40px;
 }
 
 /*# sourceMappingURL=style.css.map */

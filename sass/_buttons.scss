@@ -22,6 +22,7 @@
   background-color: transparent;
   border: 2px solid $primary;
   padding: 6px 16px;
+  color: $primary;
 
   a {
     color: $primary;
@@ -46,9 +47,27 @@
     background-color: transparent;
     border: none;
     padding: 8px 0px 8px 12px;
-  }
+  } 
 
-.carrito {
+.badge {
   background-color: $white;
-  color: $black;
+  color: $primary;
+}
+
+.bi-cart-fill  {
+    color: $primary;
+
+    &:hover {
+      color: $primary-middle-hovered;
+    }
+}
+
+.carritoItem {
+  border-radius: 4px;
+  padding: 16px;
+  border: 2px solid $white;
+}
+
+#space {
+  padding-bottom: 40px;
 }
