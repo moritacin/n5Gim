@@ -1,8 +1,20 @@
 const crossFit = [];
 
+const url = '../js/db.json';
 
-//el array actividades ahora tiene objetos de la clase Actividad.
-//Es de una forma fácil para no tener que estar pasando propiedades
+fetch(url)
+
+.then( (respuesta) => respuesta.json())
+.then( (resultado) => {
+    
+    entrenamientos = resultado.entrenamientos;
+
+    actCrossFit (resultado);
+    
+});
+
+const actCrossFit = () => {
+
 entrenamientos.map((entrenamientos) => {
     entrenamientos.nombre == "Cross Fit" && crossFit.push(new Actividad(entrenamientos)); 
 });
@@ -87,7 +99,7 @@ btnAgregar.addEventListener("click", e => {
 
         //Actualizamos localStorage
         guardarEnLocalStorage("carrito", carrito);
-        //Mostramos un modal de producto agregado
+        //Mostramos un Toastify de actividad agregada
         mostrarMensaje();
         
     }
@@ -105,3 +117,5 @@ const mostrarMensaje = () => {
           },
     }).showToast();
 }
+
+};

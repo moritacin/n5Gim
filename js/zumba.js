@@ -1,8 +1,19 @@
 const zumba = [];
 
+const url = '../js/db.json';
 
-//el array actividades ahora tiene objetos de la clase Actividad.
-//Es de una forma fácil para no tener que estar pasando propiedades
+fetch(url)
+
+.then( (respuesta) => respuesta.json())
+.then( (resultado) => {
+    
+    entrenamientos = resultado.entrenamientos;
+
+    actZumba (resultado);
+    
+});
+
+const actZumba = () => {
 entrenamientos.forEach((entrenamientos) => {
     entrenamientos.nombre == "Zumba" && zumba.push(new Actividad(entrenamientos)); 
 });
@@ -105,4 +116,5 @@ const mostrarMensaje = () => {
             color: "#262626",
           },
     }).showToast();
+}
 }

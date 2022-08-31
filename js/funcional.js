@@ -1,8 +1,21 @@
 const funcional = [];
 
+const url = '../js/db.json';
 
-//el array actividades ahora tiene objetos de la clase Actividad.
-//Es de una forma fácil para no tener que estar pasando propiedades
+fetch(url)
+
+.then( (respuesta) => respuesta.json())
+.then( (resultado) => {
+    
+    entrenamientos = resultado.entrenamientos;
+
+    actFuncional (resultado);
+    
+});
+
+
+const actFuncional = () => {
+
 entrenamientos.map((entrenamientos) => {
     entrenamientos.nombre == "Funcional" && funcional.push(new Actividad(entrenamientos)); 
 });
@@ -104,4 +117,6 @@ const mostrarMensaje = () => {
             color: "#262626",
           },
     }).showToast();
+}
+
 }

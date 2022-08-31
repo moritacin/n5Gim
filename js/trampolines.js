@@ -1,8 +1,20 @@
 const trampolines = [];
 
+const url = '../js/db.json';
 
-//el array actividades ahora tiene objetos de la clase Actividad.
-//Es de una forma fácil para no tener que estar pasando propiedades
+fetch(url)
+
+.then( (respuesta) => respuesta.json())
+.then( (resultado) => {
+    
+    entrenamientos = resultado.entrenamientos;
+
+    actTrampolines (resultado);
+    
+});
+
+const actTrampolines = () => {
+    
 entrenamientos.map((entrenamientos) => {
     entrenamientos.nombre == "Trampolines" && trampolines.push(new Actividad(entrenamientos)); 
 });
@@ -104,4 +116,6 @@ const mostrarMensaje = () => {
             color: "#262626",
           },
     }).showToast();
+}
+
 }

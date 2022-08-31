@@ -1,8 +1,20 @@
 const musculacion = [];
 
+const url = '../js/db.json';
 
-//el array actividades ahora tiene objetos de la clase Actividad.
-//Es de una forma fácil para no tener que estar pasando propiedades
+fetch(url)
+
+.then( (respuesta) => respuesta.json())
+.then( (resultado) => {
+    
+    entrenamientos = resultado.entrenamientos;
+
+    actMusculacion (resultado);
+    
+});
+
+const actMusculacion = () => {
+
 entrenamientos.map((entrenamientos) => {
     entrenamientos.nombre == "Musculación" && musculacion.push(new Actividad(entrenamientos)); 
 });
@@ -87,7 +99,7 @@ btnAgregar.addEventListener("click", e => {
 
         //Actualizamos localStorage
         guardarEnLocalStorage("carrito", carrito);
-        //Mostramos un modal de producto agregado
+        //Mostramos un toastify de actividad agregada
         mostrarMensaje();
         
     }
@@ -104,4 +116,6 @@ const mostrarMensaje = () => {
             color: "#262626",
           },
     }).showToast();
+}
+
 }

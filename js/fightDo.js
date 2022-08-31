@@ -1,9 +1,19 @@
+const url = '../js/db.json';
 const fightDo = [];
 
+fetch(url)
 
-//el array actividades ahora tiene objetos de la clase Actividad.
-//Es de una forma fácil para no tener que estar pasando propiedades
-entrenamientos.map((entrenamientos) => {
+.then( (respuesta) => respuesta.json())
+.then( (resultado) => {
+    
+    entrenamientos = resultado.entrenamientos;
+
+    actFightDo(resultado);
+    
+});
+
+const actFightDo =() => {
+    entrenamientos.map((entrenamientos) => {
     entrenamientos.nombre == "Fight Do" && fightDo.push(new Actividad(entrenamientos)); 
 });
 
@@ -104,4 +114,5 @@ const mostrarMensaje = () => {
             color: "#262626",
           },
     }).showToast();
+}
 }

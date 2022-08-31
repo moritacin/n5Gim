@@ -1,8 +1,19 @@
 const x55 = [];
 
+const url = '../js/db.json';
 
-//el array actividades ahora tiene objetos de la clase Actividad.
-//Es de una forma fácil para no tener que estar pasando propiedades
+fetch(url)
+
+.then( (respuesta) => respuesta.json())
+.then( (resultado) => {
+    
+    entrenamientos = resultado.entrenamientos;
+
+    actX55 (resultado);
+    
+});
+
+const actX55 = () => {
 entrenamientos.forEach((entrenamientos) => {
     entrenamientos.nombre == "X55" && x55.push(new Actividad(entrenamientos)); 
 });
@@ -105,4 +116,6 @@ const mostrarMensaje = () => {
             color: "#262626",
           },
     }).showToast();
+}
+
 }
