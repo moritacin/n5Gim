@@ -19,6 +19,7 @@ const guardarEnLocalStorage = (key, value) => {
 const mostrarCarrito = () => {
     //Traemos el carrito del localStorage
     const carrito = traerDeLocalStorage("carrito");
+    
     //Si no había nada nos dice que está vacío
     if (carrito.length == 0) {
         contenedor.innerHTML = `
@@ -30,12 +31,12 @@ const mostrarCarrito = () => {
         `;
     } else {
         //Si había productos guardados agrega al contenedor un 'ul' con el listado de todos los productos
+        
         const div = document.createElement('div');
         div.classList.add('container');
         div.setAttribute('id', 'space');
         contenedor.innerHTML = '';
         carrito.forEach(actividad => {
-
             div.innerHTML += `
                             <div id="${actividad.id}" class="row carritoItem">
                                 <div class="col-xs-12 col-md-6 ">
@@ -52,9 +53,13 @@ const mostrarCarrito = () => {
                                 </div>
                             </div>
             `;
+            
         });
         contenedor.appendChild(div);
-    }
+        
+        
+    } 
+    
 }
 
 //Al hacer click llamamos a un evento que manda el id de la actividad al local storage
@@ -77,5 +82,7 @@ contenedor.addEventListener("click", e => {
 
 //Mostramos el carrito apenas se carga la página
 mostrarCarrito();
+
+
 
 

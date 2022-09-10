@@ -11,15 +11,13 @@ fetch(url)
 .then( (resultado) => {
     
     entrenamientos = resultado.entrenamientos;
-
-    actividades (resultado);
+    actividades(resultado);
     
 });
 
-const actividades = () => {
-
+const actividades = () => { 
     entrenamientos.forEach((entrenamientos) => {
-        entrenamientos.tipo == "resistencia" && resistencia.push(new Actividad(entrenamientos)); 
+        entrenamientos.tipo == "Pone a prueba tu resistencia" && resistencia.push(new Actividad(entrenamientos)); 
         entrenamientos.tipo == "fuerza" && fuerza.push(new Actividad(entrenamientos)); 
         entrenamientos.tipo == "pesoCorporal" && pesoCorporal.push(new Actividad(entrenamientos)); 
         entrenamientos.tipo == "calma" && calma.push(new Actividad(entrenamientos)); 
@@ -76,7 +74,7 @@ const actividades = () => {
                               <a href="${enlace}">${nombre}</a>`
         
         contenedor.appendChild(divCards);
-    });
+    })
 
 
 }
