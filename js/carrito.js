@@ -30,8 +30,7 @@ const mostrarCarrito = () => {
                 </div>
         `;
     } else {
-        //Si había productos guardados agrega al contenedor un 'ul' con el listado de todos los productos
-        
+        //Si había actividades guardadas agrega al contenedor un 'div' con el listado de todos los productos
         const div = document.createElement('div');
         div.classList.add('container');
         div.setAttribute('id', 'space');

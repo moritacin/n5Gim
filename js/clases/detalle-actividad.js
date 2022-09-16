@@ -1,4 +1,4 @@
-
+//Creo arrays en donde voy a guardar cada actividad
 const kangooJumps = [];
 const trampolines = [];
 const x55 = [];
@@ -10,17 +10,17 @@ const zumba = [];
 const streching = [];
 const yoga = [];
 
-
-const contenedorKangooJumps = document.getElementById("contenedor-kangooJumps");
-const contenedorTrampolines = document.getElementById("contenedor-trampolines");
-const contenedorX55 = document.getElementById("contenedor-x55");
-const contenedorFuncional = document.getElementById("contenedor-funcional");
-const contenedorCrossFit = document.getElementById("contenedor-crossFit");
-const contenedorMusculacion = document.getElementById("contenedor-musculacion");
-const contenedorFightDo = document.getElementById("contenedor-fightDo");
-const contenedorZumba = document.getElementById("contenedor-zumba");
-const contenedorStreching = document.getElementById("contenedor-streching");
-const contenedorYoga = document.getElementById("contenedor-yoga");
+//Creo variables para los contenedores de cada página donde voy a guardar la info de cada actividad
+const contenedorKangooJumps = document.querySelector("#contenedor-kangooJumps");
+const contenedorTrampolines = document.querySelector("#contenedor-trampolines");
+const contenedorX55 = document.querySelector("#contenedor-x55");
+const contenedorFuncional = document.querySelector("#contenedor-funcional");
+const contenedorCrossFit = document.querySelector("#contenedor-crossFit");
+const contenedorMusculacion = document.querySelector("#contenedor-musculacion");
+const contenedorFightDo = document.querySelector("#contenedor-fightDo");
+const contenedorZumba = document.querySelector("#contenedor-zumba");
+const contenedorStreching = document.querySelector("#contenedor-streching");
+const contenedorYoga = document.querySelector("#contenedor-yoga");
 
 const url = '../js/db.json';
 
@@ -35,6 +35,7 @@ fetch(url)
     
 });
 
+//Recorro mi objeto entrenamientos y dependiendo del dato que necesite lo llamo y lo ubico en su contenedr
 const actividadDetalle = () => {
     entrenamientos.forEach((entrenamientos) => {
         
@@ -124,6 +125,8 @@ const actividadDetalle = () => {
 
 }
 
+//Creo un solo contenedor en donde voy a ir llamando al contenido de cada Array
+
 const contenedor = document.createElement("div");
 
 const mostrarAct = (actividad) => {
@@ -174,8 +177,9 @@ const mostrarAct = (actividad) => {
                     `;
 }
 
+//Traigo el dato de local storage
+
 const traerDeLocalStorage = (key) => {
-    // console.log(localStorage.getItem('veamos-que-trae-si-la-key-no-existe'));
     let carrito = [];
     if (localStorage.getItem(key)) {
         carrito = JSON.parse(localStorage.getItem(key));
@@ -183,11 +187,12 @@ const traerDeLocalStorage = (key) => {
     return carrito;
 }
 
+//Guardo en local storage
 const guardarEnLocalStorage = (key, value) => {
     localStorage.setItem(key, JSON.stringify(value));
 }
 
-//Retorna el producto de data.js que coincida con el argumento
+//Retorna el producto de data.js que coincida con el id
 const obtenerActividad = (id) => {
     return entrenamientos.find(actividad => actividad.id == id);
 }
@@ -200,14 +205,17 @@ contenedor.addEventListener("click", e => {
         const carrito = traerDeLocalStorage("carrito");
         const act = obtenerActividad(e.target.id);
         carrito.push(act);
-
+        
+        contarActividades++;
+    
         //Actualizamos localStorage
         guardarEnLocalStorage("carrito", carrito);
-        //Mostramos un modal de producto agregado
+        //Mostramos un modal de actividad agregada
         mostrarMensaje();
     }
 });
 
+//Muestro el mensaje cada vez que agrego una actividad
 const mostrarMensaje = () => {
     Toastify({
         text: "¡Agregamos la actividad al carrito!",
@@ -221,4 +229,23 @@ const mostrarMensaje = () => {
     }).showToast();
 }
 
+//Esto intente hacer para mostrar el contador en la badge del carrito pero no me salió
+let contarActividades = 0;
+const contarActs = () => {
+    carrito.forEach((actividad) => {
+        contarActividades = contarActividades + parseInt(actividad.cantidad);
+    })
+    return contarActividades;
+}
 
+const actualizarContador = () => {
+    let totalActs = contarActs();
+    let countCarrito = document.querySelector("#badgeCarrito");
+    countCarrito.innerHTML = totalActs;
+}
+
+const actualizarCarrito = () => {
+    actualizarContador();
+    mostrarAct();
+    guardarEnLocalStorage();
+}

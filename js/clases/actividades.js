@@ -15,9 +15,11 @@ fetch(url)
     
 });
 
+
+//Quise unificar esta page con la de detalle-actividades pero no pude. Queda independiente
 const actividades = () => { 
     entrenamientos.forEach((entrenamientos) => {
-        entrenamientos.tipo == "Pone a prueba tu resistencia" && resistencia.push(new Actividad(entrenamientos)); 
+        entrenamientos.tipo == "resistencia" && resistencia.push(new Actividad(entrenamientos)); 
         entrenamientos.tipo == "fuerza" && fuerza.push(new Actividad(entrenamientos)); 
         entrenamientos.tipo == "pesoCorporal" && pesoCorporal.push(new Actividad(entrenamientos)); 
         entrenamientos.tipo == "calma" && calma.push(new Actividad(entrenamientos)); 

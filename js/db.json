@@ -2,7 +2,7 @@
     "entrenamientos": [
 	{
 		"id": 1,
-		"tipo": "Pone a prueba tu resistencia",
+		"tipo": "resistencia",
 		"nombre": "Kangoo Jumps",
 		"enlace": "kangoo-jumps.html",
 		"image": "kangoo-jumps.png",
@@ -30,7 +30,7 @@
 	},
 	{
 		"id": 2,
-		"tipo": "Pone a prueba tu resistencia",
+		"tipo": "resistencia",
 		"nombre": "Trampolines",
 		"enlace": "trampolines.html",
 		"image": "trampolines.png",
@@ -58,7 +58,7 @@
 	},
 	{
 		"id": 3,
-		"tipo": "Pone a prueba tu resistencia",
+		"tipo": "resistencia",
 		"nombre": "X55",
 		"enlace": "x55.html",
 		"image": "x55.png",
@@ -86,7 +86,7 @@
 	},
 	{
 		"id": 4,
-		"tipo": "Pone a prueba tu resistencia",
+		"tipo": "resistencia",
 		"nombre": "Funcional",
 		"enlace": "funcional.html",
 		"image": "funcional.png",

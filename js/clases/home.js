@@ -14,6 +14,8 @@ fetch(url)
 
 });
 
+
+//Muestro solo las actividades destacadas en la home
 const mostrarDestacados = () => {
 
     entrenamientos.forEach((entrenamientos) => {
